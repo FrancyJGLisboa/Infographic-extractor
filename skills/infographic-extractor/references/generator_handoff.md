@@ -15,7 +15,7 @@ This file is reference-only. The extractor does NOT run the generator — it pro
 | `{{DOMINIO}}` | Domain or market |
 | `{{AUDIENCIA}}` | Target audience |
 | `{{IDIOMA}}` | `PT-BR` or `EN` |
-| `{{ARQUETIPO}}` | One of: `single_number_metric`, `process_flow`, `state_regime`, `comparison_matrix`, `causal_chain`, `cycle_loop` |
+| `{{ARQUETIPO}}` | One of: `single_number_metric`, `process_flow`, `state_regime`, `comparison_matrix`, `causal_chain`, `cycle_loop`, `network_map`, `taxonomy_tree` |
 | `{{ANALOGIA_FINAL}}` | Cross-domain analogy for the pull quote, or null |
 
 ---
@@ -26,11 +26,11 @@ This file is reference-only. The extractor does NOT run the generator — it pro
 
 If `{{ARQUETIPO}}` is supplied (which is always the case from extractor handoff), skip diagnosis and proceed.
 
-If not supplied, run the router: ask which of the six archetype patterns the concept fits, justify briefly, propose an alternative if the concept is hybrid, request user confirmation before generation.
+If not supplied, run the router: ask which of the eight archetype patterns the concept fits, justify briefly, propose an alternative if the concept is hybrid, request user confirmation before generation.
 
 ### Step 2 — Apply design system
 
-The design system is invariant across all six archetypes.
+The design system is invariant across all eight archetypes.
 
 **Palette (fixed hex)**:
 - Navy primary: `#1B2A47` — titles, section numbers, quote block
@@ -108,3 +108,7 @@ Produce HTML that is:
 **causal_chain**: 5 sections — driver / transmission mechanism / expected magnitudes / modifiers / when chain breaks. Upper visual: 3-5 chained nodes with thick arrows, first node teal, last colored by sign. Pull quote: why the effect is not linear.
 
 **cycle_loop**: 5 sections — cycle stages / typical duration / what drives it / inflection signals / geographic variations. Upper visual: circular diagram with 4-8 stages. Pull quote: why the cycle self-perpetuates.
+
+**network_map**: 5 sections — network overview / major nodes / principal corridors / concentration vs dispersion / structural shifts. Upper visual: world or regional map (or abstract node graph) with nodes sized by weight and edges sized by flow magnitude. Teal for primary nodes, gray for secondary, orange for emerging or contested. Pull quote: the structural reason the dominant corridor is dominant.
+
+**taxonomy_tree**: 5 sections — root and first-level split / branches detailed / leaf attributes / where boundaries blur / why classification matters. Upper visual: tree diagram (top-down or horizontal) with navy root, teal first-level branches, smaller leaves with short attribute labels. Orange highlight on branches with overlap. Pull quote: the cost of misclassifying.

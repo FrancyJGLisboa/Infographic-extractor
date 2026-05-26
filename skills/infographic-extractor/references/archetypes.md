@@ -1,6 +1,6 @@
 # Archetypes
 
-Six archetypes. Each has a lens (what to look for in raw material) and a content structure (what the downstream generator will produce).
+Eight archetypes. Each has a lens (what to look for in raw material) and a content structure (what the downstream generator will produce).
 
 Apply each lens independently to the full material during Etapa 2. Mark hybrids when a concept fires under multiple lenses.
 
@@ -148,6 +148,54 @@ Apply each lens independently to the full material during Etapa 2. Mark hybrids 
 
 ---
 
+## A7 — Network / Map
+
+**When to use**: nodes (places, entities, actors) connected by flows or relationships where geography or topology — not sequence — is the organizing axis (global trade lanes, supply networks, settlement corridors, partnership graphs, basin-by-basin shipping rotations).
+
+**Lens — what to look for**:
+- Enumeration of geographic units (countries, regions, ports, hubs) treated as nodes
+- Flow language without ordering ("X exports to Y", "Z connects A and B", "loaded in P, discharged in Q")
+- "Hub", "corridor", "lane", "basin", "spoke" vocabulary
+- Multiple origin-destination pairs presented in parallel without a single canonical sequence
+- Discussions where geography itself is the structure (regional clusters, basins, trade blocs)
+
+**Visual metaphor**: world or regional map (or abstract node graph when geography is not literal) with nodes sized by weight (volume, importance, share) and edges sized by flow magnitude. Color-coded clusters or basins; teal for primary nodes, gray for secondary, orange for emerging or contested.
+
+**Content structure (5 sections)**:
+1. Network overview — what the nodes represent, what flows between them, and the unit of flow (2-3 sentences)
+2. Major nodes — 5-8 most important with one defining attribute each (volume, share, role)
+3. Principal corridors — top 3-5 flows with magnitude and direction
+4. Concentration vs dispersion — how much of total flow concentrates in the top N nodes or corridors
+5. Structural shifts — how the network has changed or is changing (emerging nodes, declining corridors, new lanes)
+
+**Pull quote**: the structural reason the dominant corridor is dominant (geography, cost, policy, infrastructure).
+
+---
+
+## A8 — Taxonomy / Tree
+
+**When to use**: parent → child → grandchild hierarchical categorization where each branch has distinct attributes and leaves are mutually exclusive within a branch (regulatory frameworks, contract templates, instrument families, product catalogs, standards libraries).
+
+**Lens — what to look for**:
+- "A is a type of B" or "B includes X, Y, Z" patterns
+- Standards, template, framework, or catalog families
+- "Library", "Bible", "framework", "family", "catalog" vocabulary
+- Parent-child structures where children at the same level are mutually exclusive
+- Multi-level categorization where leaves differ on multiple attributes
+
+**Visual metaphor**: tree diagram (top-down or horizontal) with navy root, teal first-level branches, smaller leaves with short attribute labels. Orange highlight on branches with overlap or contested membership.
+
+**Content structure (5 sections)**:
+1. Root and first-level split — what the parent category is and how it divides at the first cut (2-3 sentences)
+2. Branches detailed — for each major branch: definition, leaf members, governing body or origin (1-2 lines per leaf)
+3. Leaf attributes — what distinguishes leaves within the same branch (table or compact comparison)
+4. Where boundaries blur — branches with overlap, hybrid leaves, or contested membership
+5. Why classification matters — operational consequence of putting something in the wrong branch
+
+**Pull quote**: the cost of misclassifying — what breaks when something is filed in the wrong branch.
+
+---
+
 ## Hybrid handling
 
 When a concept fires under multiple lenses, mark `is_hybrid: true` and record both:
@@ -159,17 +207,18 @@ Common hybrids worth noting:
 - ENSO can read as `state_regime` (3 discrete states) or `cycle_loop` (recurrent oscillation). Primary depends on whether the material emphasizes states+thresholds or recurrence+drivers.
 - Carry trade can read as `causal_chain` (rate diff → flows → FX) or `state_regime` (risk-on / risk-off). Primary depends on framing.
 - Hog cycle is canonical `cycle_loop` but the breeding-pricing transmission is also `causal_chain`. Primary: cycle (richer for the topic).
+- Trade routes can read as `network_map` (basin geography) or `comparison_matrix` (route × origin × destination × cargo). Primary depends on whether the material emphasizes geography or attribute parallelism.
+- Vessel size classes can read as `comparison_matrix` (parallel attributes per class) or `taxonomy_tree` (size families with sub-segments). Primary: matrix when attributes are emphasized; tree when family relationships are emphasized.
+- Document standards (Synacomex, NYPE, BIMCO) can read as `taxonomy_tree` (publishing body → contract type → template) or `comparison_matrix` (template × clauses × scope). Primary depends on whether the material emphasizes lineage or side-by-side attributes.
 
 ---
 
 ## Outside-archetype patterns (route to `archetype_gaps`)
 
-Visualizable but not covered by the six:
+Visualizable but not covered by the eight:
 
-- **Taxonomy / hierarchy** — tree of categories and subcategories
 - **Distribution / quantiles** — tails vs body of a probability distribution
 - **Anatomy / component breakdown** — labeled parts of a thing
-- **Network / map** — nodes and connections without sequence
 - **Multi-variable timeline** — multiple series over time with annotated events
 
-If a pattern recurs across multiple `archetype_gaps` entries, surface it as a candidate for a future seventh archetype.
+If a pattern recurs across multiple `archetype_gaps` entries, surface it as a candidate for a future ninth archetype.

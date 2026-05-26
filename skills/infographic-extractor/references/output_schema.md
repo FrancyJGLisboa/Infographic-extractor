@@ -29,6 +29,8 @@ Template:
 - comparison_matrix: <count>
 - causal_chain: <count>
 - cycle_loop: <count>
+- network_map: <count>
+- taxonomy_tree: <count>
 
 **Observations**: <2-3 sentences on overall quality of the material, rich areas, gaps, recurring patterns>
 ```
@@ -47,15 +49,15 @@ extraction_metadata:
   source_language: <PT-BR | EN | other>
   output_language: <PT-BR | EN>
   domain: <inferred or supplied>
-  scan_lenses: [single_number_metric, process_flow, state_regime, comparison_matrix, causal_chain, cycle_loop]
+  scan_lenses: [single_number_metric, process_flow, state_regime, comparison_matrix, causal_chain, cycle_loop, network_map, taxonomy_tree]
   audiencia: <as supplied or default>
   limiar_inventario: <0-5>
 
 inventory:
   - id: 01
     concept_name: "<concise name>"
-    primary_archetype: <one of the six>
-    secondary_archetype: <one of the six, or null>
+    primary_archetype: <one of the eight>
+    secondary_archetype: <one of the eight, or null>
     is_hybrid: <true | false>
     one_line_essence: "<single sentence>"
     source_location: "<traceable reference>"
@@ -89,7 +91,7 @@ inventory:
 archetype_gaps:
   - concept_name: "<name>"
     description: "<why visualizable but does not fit>"
-    closest_archetype: <one of the six, with caveat>
+    closest_archetype: <one of the eight, with caveat>
     suggested_new_archetype: "<proposed name if pattern repeats, else null>"
     source_location: "<traceable reference>"
 ```
@@ -124,7 +126,7 @@ Material: a 45-minute podcast transcript on Brazilian corn ethanol industry econ
 - causal_chain: 1
 - cycle_loop: 0
 
-**Observations**: Material is dense on technical concepts and well-suited to single-number and comparison archetypes. Cycle/loop is absent — the speaker treats the industry as growth phase, not cyclical. One archetype gap: the speaker spent 4 minutes on a hierarchy of integrated vs standalone plants that does not fit any of the six.
+**Observations**: Material is dense on technical concepts and well-suited to single-number and comparison archetypes. Cycle/loop is absent — the speaker treats the industry as growth phase, not cyclical. One archetype gap: the speaker spent 4 minutes on the distribution of plant-level crush margins across the industry (a tails-vs-body distribution), which does not fit any of the eight.
 ```
 
 ### YAML excerpt (first candidate only)
@@ -135,7 +137,7 @@ extraction_metadata:
   source_language: PT-BR
   output_language: PT-BR
   domain: biofuels and corn ethanol
-  scan_lenses: [single_number_metric, process_flow, state_regime, comparison_matrix, causal_chain, cycle_loop]
+  scan_lenses: [single_number_metric, process_flow, state_regime, comparison_matrix, causal_chain, cycle_loop, network_map, taxonomy_tree]
   audiencia: commodity research analysts
   limiar_inventario: 0
 
